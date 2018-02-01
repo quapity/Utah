@@ -39,15 +39,14 @@ Set-Up
     - pip install adjustText
 * And I gave you come clumsy plotting functions that use Basemap
     - mpl_toolkit
-    - 
+* And of Tensoflow to load the model
+   -Tensorlow
+  
 
 
 Other Stuff
 -----
 * Model Training occured on ~ 13k events
- 
-
-![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen3.png)
 
 Useage
 ----------
@@ -58,6 +57,8 @@ Useage
 data = preproc_data(parse_dbselect(),num_events=20)
 plt_events(data)
 make_stats(data)
+The stats table saves to the local dir and looks like this:
+[ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen2.png)
 
 
 Credits
