@@ -1,0 +1,4 @@
+# ignore generated html files,
+*.html
+__pycache__
+#tutorial*

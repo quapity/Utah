@@ -108,12 +108,12 @@ def parse_dbselect(filename = 'dbcat'):
     return pd.DataFrame(ddict)
 #%%
 pre_filt = [0.001, 0.005, 45, 50]
-def preproc_data(filename ='out_from_parse_dbselect', to_file=False, num_events=2, **ev_id):
+def preproc_data(filename ='out_from_parse_dbselect', to_file=False, num_lines=2, **ev_id):
     #df = pd.read_pickle(filename)
     if ev_id:
         df = filename[filename['id'] == ev_id['ev_id']]
     else:
-        df = filename.iloc[:num_events]
+        df = filename.iloc[:num_lines]
     
     df = df.reset_index(drop=True)
     pdf= None
@@ -204,8 +204,9 @@ def preproc_data(filename ='out_from_parse_dbselect', to_file=False, num_events=
     pred1 = np.argmax(predictions1,axis=1)
     pdf['predictions'] = [np.array(x) for x in predictions1]
     pdf['preds'] = pred1
+    num_events = len(set(pdf['id']))
     #pdf[pdf['pred'] != pdf['lbl']]
-    print('sucessfully processed ' + str(count) + ' events')
+    print('sucessfully processed ' + str(count) + ' examples from ' + str(num_events))
     if to_file == True:   
         stg = 'proc_'+filename
         pdf.to_pickle(stg)
