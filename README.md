@@ -7,12 +7,12 @@ Binary Event Classification on UUSS Data
 |
 <b><a href="#set-up">Set-Up</a></b>
 |
-<b><a href="#usage">Usage</a></b>
+<b><a href="#use">Use</a></b>
 |
 <b><a href="#credits">Credits</a></b>
-|
 
 </p>
+
 
 Overview
 -----
@@ -26,27 +26,25 @@ Set-Up
 ------------
 
 ### Dependencies
-* Relies on Numpy,Scipy,Pandas,and Geopy. Most can be installed with pip or ship with Anaconda
-    - http://pandas.pydata.org
-    - http://scipy.org
-    - https://github.com/geopy/geopy
+* Relies on Numpy,Scipy,Pandas. Most can be installed with pip or ship with Anaconda
 * Waveform data from Obspy  
     - https://github.com/obspy/obspy/wiki
 * Database files from UUSS 
     - eventlist, filename: dbcat 
     - picktables by event type, filenames: le,qb
-* I use the super handy [adjustText](https://github.com/Phlya/adjustText) to plot non-overlapping text on map (esp for Mark)
+* I use the super handy [adjustText](https://github.com/Phlya/adjustText) to plot non-overlapping text on map
     - pip install adjustText
 * And I gave you come clumsy plotting functions that use Basemap
     - [Basemap Toolkit]
-* And of Tensoflow to load the model
-    -[Tensorlow]
+* I load the models (built with Tensoflow) using Keras
+    - [Tensorlow]
+    - [Keras](https://keras.io/)
+    
   
-
-Useage
+Use
 ------------
 
-### General Usage
+### General Use
 
 * Once you have db files [dbcat,le,qb] you can call any function in the pipeline. The following will get you a map and table for the first 20 events in your database:
    - data = preproc_data(parse_dbselect(),num_events=20)
