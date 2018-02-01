@@ -8,7 +8,7 @@ Binary Event Classification on UUSS Data
 <b><a href="#set-up">Set-up</a></b>
 |
 <b><a href="#set-up">Usage</a></b>
-    |
+|
 <b><a href="#set-up">Credits</a></b>
 
 </p>
@@ -53,15 +53,16 @@ Useage
 ### General Usage
 
 * Once you have db files [dbcat,le,qb] you can call any function in the pipeline. The following will get you a map and table for the first 20 events in your database:
-data = preproc_data(parse_dbselect(),num_events=20)
-plt_events(data)
-make_stats(data)
+   - data = preproc_data(parse_dbselect(),num_events=20)
+   - plt_events(data)
+   - make_stats(data)
+   
 The stats table saves to the local dir and looks like this:
 
 ![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen2.png)
 
-Still need more help/details/info?? 
-[Jupyter] notebook coming soon
+* Still need more help/details/info?? 
+   - [Jupyter] notebook coming soon
 
 Credits
 ------------
