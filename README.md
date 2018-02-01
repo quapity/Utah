@@ -37,9 +37,9 @@ Set-Up
 * I use the super handy adjustText(https://github.com/Phlya/adjustText) to plot non-overlapping text on map (esp for Mark)
     - pip install adjustText
 * And I gave you come clumsy plotting functions that use Basemap
-    - mpl_toolkit
+    - [Basemap Toolkit]
 * And of Tensoflow to load the model
-   -Tensorlow
+   -[Tensorlow]
   
 
 
@@ -60,6 +60,8 @@ The stats table saves to the local dir and looks like this:
 
 ![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen2.png)
 
+Still need more help/details/info?? 
+[Jupyter] notebook coming soon
 
 Credits
 ------------
@@ -67,6 +69,10 @@ Credits
 * Tensorflow
 * Obspy
 
-
+[adjustText]:https://github.com/Phlya/adjustText
+[Basemap Toolkit]:https://matplotlib.org/basemap/
+[Jupyter]:http://jupyter.org/
+[Tensorflow]:https://www.tensorflow.org/
+[Obspy]:https://github.com/obspy/obspy/wiki
 
 
