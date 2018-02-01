@@ -197,8 +197,7 @@ def preproc_data(filename ='out_from_parse_dbselect', to_file=False, num_lines=2
             count+=1
         except: #ValueError :
             print(i)
-        if num_events > 50:
-            print(i)
+        
     pdf = pdf.reset_index(drop=True)
     predictions1 = model.predict(np.array([scale_transform(x) for x in pdf['x']]))
     pred1 = np.argmax(predictions1,axis=1)
