@@ -7,9 +7,9 @@ Binary Event Classification on UUSS Data
 |
 <b><a href="#set-up">Set-up</a></b>
 |
-<b><a href="#set-up">Usage</a></b>
+<b><a href="#usage">Usage</a></b>
 |
-<b><a href="#set-up">Credits</a></b>
+<b><a href="#credits">Credits</a></b>
 
 </p>
 
@@ -41,11 +41,6 @@ Set-Up
 * And of Tensoflow to load the model
     -[Tensorlow]
   
-
-
-Other Stuff
------
-* Model Training occured on ~ 13k events
 
 Useage
 ----------
