@@ -2,7 +2,7 @@ Binary Event Classification on UUSS Data
 ===============================================
 </p>
 
-<p align="center">
+<p align="right">
 <b><a href="#overview">Overview</a></b>
 |
 <b><a href="#set-up">Set-Up</a></b>
@@ -10,6 +10,7 @@ Binary Event Classification on UUSS Data
 <b><a href="#usage">Usage</a></b>
 |
 <b><a href="#credits">Credits</a></b>
+|
 
 </p>
 
