@@ -5,7 +5,7 @@ Binary Event Classification on UUSS Data
 <p align="center">
 <b><a href="#overview">Overview</a></b>
 |
-<b><a href="#set-up">Set-up</a></b>
+<b><a href="#set-up">Set-Up</a></b>
 |
 <b><a href="#usage">Usage</a></b>
 |
@@ -43,7 +43,7 @@ Set-Up
   
 
 Useage
-----------
+------------
 
 ### General Usage
 
