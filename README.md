@@ -19,7 +19,7 @@ Overview
 Use a model (CNN,LSTM or combined) trained on data within Utah (2012-2017) to make predictions on new events. 
 The model takes event spectrograms (1-3 channel) and classifies events as either quarry blasts or local earthquakes based on the spectral content.
 
-<img src="https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen1.png" width=40%>
+<p align="center"><img src="https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen1.png" width=40%></p>
 
 Set-Up
 ------------
