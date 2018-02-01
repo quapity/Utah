@@ -1,4 +1,4 @@
-Binary LSTM Event Classification on UUSS Data
+Binary Event Classification on UUSS Data
 ===============================================
 </p>
 
@@ -34,12 +34,12 @@ Set-Up
 * Database files from UUSS 
     - eventlist, filename: dbcat 
     - picktables by event type, filenames: le,qb
-* I use the super handy adjustText(https://github.com/Phlya/adjustText) to plot non-overlapping text on map (esp for Mark)
+* I use the super handy [adjustText](https://github.com/Phlya/adjustText) to plot non-overlapping text on map (esp for Mark)
     - pip install adjustText
 * And I gave you come clumsy plotting functions that use Basemap
     - [Basemap Toolkit]
 * And of Tensoflow to load the model
-   -[Tensorlow]
+    -[Tensorlow]
   
 
 
