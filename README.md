@@ -8,6 +8,8 @@ Binary LSTM Event Classification on UUSS Data
 <b><a href="#set-up">Set-up</a></b>
 |
 <b><a href="#set-up">Usage</a></b>
+    |
+<b><a href="#set-up">Credits</a></b>
 
 </p>
 
@@ -18,7 +20,7 @@ Use a model (CNN,LSTM or combined) trained on data within Utah (2012-2017) to ma
 The model takes event spectrograms (1-3 channel) and classifies events as either quarry blasts or local earthquakes based on the spectral content.
 
 MODEL INPUT
-![ScreenShot](https://github.com/quapity/event_cluster/raw/master/screen1.png)
+![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen1.png)
 
 Set-Up
 ------------
