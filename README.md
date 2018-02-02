@@ -34,10 +34,10 @@ Set-Up
     - picktables by event type, filenames: le,qb
 * I use the super handy [adjustText](https://github.com/Phlya/adjustText) to plot non-overlapping text on map
     - pip install adjustText
-* And I gave you come clumsy plotting functions that use Basemap
+* And I gave you some clumsy plotting functions that use Basemap
     - [Basemap Toolkit]
 * I load the models (built with Tensoflow) using Keras
-    - [Tensorlow]
+    - [Tensorlow](https://www.tensorflow.org/)
     - [Keras](https://keras.io/)
     
   
@@ -56,7 +56,7 @@ The stats table saves to the local dir and looks like this:
 ![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/screen2.png)
 
 * Still need more help/details/info?? 
-   - [Jupyter] notebook coming soon
+   - [Jupyter] notebook [here](https://github.com/quapity/UUSS_LSTM_classification/blob/master/tutorial.ipynb)
 
 Credits
 ------------
