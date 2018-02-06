@@ -55,7 +55,7 @@ The stats table saves to the local dir and looks like this:
 ![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/figures/screen2.png)
 
 * Still need more help/details/info?? 
-   - [Jupyter] notebook [here](https://github.com/quapity/UUSS_LSTM_classification/raw/master/tutorial.ipynb)
+   - [Jupyter] notebook [here](https://github.com/quapity/UUSS_LSTM_classification/blob/master/tutorial.ipynb)
 
 Credits
 ------------
