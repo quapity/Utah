@@ -205,7 +205,7 @@ def preproc_data(filename ='out_from_parse_dbselect', to_file=False, num_lines=2
     pdf['preds'] = pred1
     num_events = len(set(pdf['id']))
     #pdf[pdf['pred'] != pdf['lbl']]
-    print('sucessfully processed ' + str(count) + ' examples from ' + str(num_events))
+    print('sucessfully processed ' + str(count) + ' examples from ' + str(num_events)+ ' events')
     if to_file == True:   
         stg = 'proc_'+filename
         pdf.to_pickle(stg)
@@ -248,8 +248,8 @@ def plt_events(data):
     lomax = max(data['stlo'])+.1
     m = Basemap(llcrnrlat=latmin,urcrnrlat=latmax,llcrnrlon=lomin,
         urcrnrlon=lomax,resolution='h',epsg = 32142)
-    #m.fillcontinents(color='grey',lake_color='black',zorder=0)
-    m.arcgisimage(service='World_Shaded_Relief', xpixels = 1500, verbose= True,zorder=0)
+    m.fillcontinents(color='grey',lake_color='black',zorder=0)
+    #m.arcgisimage(service='World_Shaded_Relief', xpixels = 1500, verbose= True,zorder=0)
     m.drawstates()
     m.drawcountries()
     #m.drawcoastlines()
@@ -279,9 +279,9 @@ def plt_events(data):
     
             x,y = m(data.iloc[i]['stlo'],data.iloc[i]['stla'])
             plt.plot([lo,x],[la,y],c=color,linewidth=.4)
-            plt.scatter(x,y,facecolor=stcol,edgecolor='black',s=70,alpha =.2,zorder=500000)
+            legend1 = plt.scatter(x,y,facecolor=stcol,edgecolor='black',s=70,alpha =.9,zorder=5000)
         #plt.scatter(x,y,facecolor=color,edgecolor=color,alpha=.6,s= 30)
-        plt.scatter(lo,la,facecolor=color,edgecolor=color,s=20, alpha = .6)
+        legend2 =plt.scatter(lo,la,facecolor=color,edgecolor=color,s=20, alpha = .9)
     
     slat,slo =[],[]
     for sta in list(set(data.id)):
@@ -298,7 +298,8 @@ def plt_events(data):
     text= plot_txt(x,y,list(set(data.id)))
     adjustText.adjust_text(text, arrowprops=dict(arrowstyle="-", color='black', lw=0.1),
             autoalign='y')
-        
+    plt.legend((legend2,legend1), ('Epicenter (red=qb)','Station (black=incorrect)'),
+           loc='best',fontsize=18,shadow=True)    
     #plt.savefig('intro_map3.eps',bbox_inches='tight', transparent =True)
     return fig    
 
