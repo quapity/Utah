@@ -59,6 +59,7 @@ The stats table saves to the local dir and looks like this:
 
 Credits
 ------------
+Reference: Linville et al., 2019, in press (GRL accepted manuscript)
 
 * [Tensorflow]
 * [Keras]
