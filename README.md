@@ -5,9 +5,9 @@ Binary Event Classification on UUSS Data
 <p align="left">
 <b><a href="#overview">Overview</a></b>
 |
-<b><a href="#set-up">Set-Up</a></b>
+<b><a href="#Data">Data</a></b>
 |
-<b><a href="#use">Use</a></b>
+<b><a href="#Models">Models</a></b>
 |
 <b><a href="#credits">Credits</a></b>
 
@@ -17,59 +17,44 @@ Binary Event Classification on UUSS Data
 Overview
 -----
 
-Use a model (CNN,LSTM or combined) trained on events within Utah (2012-2017) to make predictions on new events. 
-The model takes event spectrograms (1-3 channel; 90s) and classifies them as either quarry blasts or local earthquakes based on their spectral content.
+The University of Utah Seismograph Stations ([UUSS]) has been monitoring seismicity in Utah for decades. This work uses just a few years (2012-2017) of the UUSS seismicity catalog to test how well deep learning can assign event type using waveform data from individual stations. Although many event types are observed during routine processing, discrimination of quarry blasts and earthquakes can be among the most time consuming. This work focuses on binary event discrimination for quarry blasts and earthquakes at local distances (< 350 km).
+
+What we found is that we are able to match event types in Utah very well using a variety of architectures when we rely on event spectrograms (90 seconds in duration). Each quarry site produces many examples, and even though examples from an individual mine site can vary significantly, identifying new examples from these mine sites is successful. Additionally, we were able to make successful predictions using both vertical and triaxial sensors using one model, which makes this a practical, flexible and often highly accurate alternative or compliment to waveform matching methods.
 
 <p align="center"><img src="https://github.com/quapity/UUSS_LSTM_classification/raw/master/figures/screen1.png"></p>
 
-Set-Up
-------------
+Data
+-----
 
-### Dependencies
-* Relies on Numpy,Scipy,Pandas. Most can be installed with pip or ship with Anaconda
-* Waveform data from [Obspy]  
-* Database files from UUSS 
-    - eventlist, filename: dbcat 
-    - picktables by event type, filenames: le,qb
-* I use the super handy [adjustText]to plot non-overlapping text on map
-    - pip install adjustText
-* And I gave you some clumsy plotting functions that use Basemap
-    - [Basemap Toolkit]
+Previously we provided the database files for quarry blast (qb) and local earthquakes (le) to allow the most flexibility for future uses. But flexibility can come at the cost of usability so we have updated the data directory to include a csv of the catalog metadata we used. This does not include the data arrays, but gives users the first arrival pick times for stations and includes some event data (mag, type, etc). Using [obspy] users can download data arrays for use in whatever format is desirable.
+
+
+Models
+-----
+
+The LSTM models we used in this study were built with Keras and are provided here. Subsequent studies that leverage this dataset use pytorch, for example [semi-supervised learning] for event discrimination. 
+
 * Load the models (HDF5, built with Tensorflow) using Keras
     - [Tensorflow]
     - [Keras]
     
   
-Use
-------------
-
-### General Use
-
-* Once you have db files (dbcat,le,qb) you can call any function in the pipeline. The following will get you a map and table for the first 20 events in your database file:
-   - data = preproc_data(parse_dbselect(),num_events=20)
-   - plt_events(data)
-   - make_stats(data)
-   
-The stats table saves to the local dir and looks like this:
-
-![ScreenShot](https://github.com/quapity/UUSS_LSTM_classification/raw/master/figures/screen2.png)
-
-* Still need more help/details/info?? 
-   - [Jupyter] notebook [here](https://github.com/quapity/UUSS_LSTM_classification/blob/master/tutorial.ipynb)
 
 Credits
 ------------
-Reference: Linville et al., 2019, in press (GRL accepted manuscript)
+Reference: 
+
+Linville, L., Pankow, K., & Draelos, T. (2019). Deep learning models augment analyst decisions for event discrimination. Geophysical Research Letters, 46(7), 3643-3651.
+
 
 * [Tensorflow]
 * [Keras]
 * [Obspy]
 
-[adjustText]:https://github.com/Phlya/adjustText
-[Basemap Toolkit]:https://matplotlib.org/basemap/
-[Jupyter]:http://jupyter.org/
 [Keras]:https://keras.io/
 [Tensorflow]:https://www.tensorflow.org/
 [Obspy]:https://github.com/obspy/obspy/wiki
+[UUSS]:https://quake.utah.edu
+[semi-supervised learning]:https://github.com/sandialabs/shadow
 
 
