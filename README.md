@@ -26,7 +26,7 @@ What we found is that we are able to match event types in Utah very well using a
 Data
 -----
 
-Previously we provided the database files for quarry blast (qb) and local earthquakes (le) to allow the most flexibility for future uses. But flexibility can come at the cost of usability so we have updated the data directory to include a csv of the catalog metadata we used. This does not include the data arrays, but gives users the first arrival pick times for stations and includes some event data (mag, type, etc). Using [obspy] users can download data arrays for use in whatever format is desirable.
+In data directory includes a csv of the catalog metadata we used. This does not include the data arrays, but gives users the first arrival pick times for stations and includes some event data (mag, type, etc). Using [obspy] users can download data arrays for use in whatever format is desirable. Alternative formats and additional Utah event catalogs through 2020 can be found at https://doi.org/10.31905/RDQW00CT.
 
 
 Models
