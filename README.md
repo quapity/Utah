@@ -34,11 +34,6 @@ Models
 
 The LSTM models we used in this study were built with Keras and are provided here. Subsequent studies that leverage this dataset use pytorch, for example [semi-supervised learning] for event discrimination. 
 
-* Load the models (HDF5, built with Tensorflow) using Keras
-    - [Tensorflow]
-    - [Keras]
-    
-  
 
 Credits
 ------------
